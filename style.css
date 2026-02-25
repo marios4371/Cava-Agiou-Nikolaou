@@ -24,7 +24,7 @@ body {
     color: var(--black);
     font-family: var(--font-sans);
     overflow-x: hidden;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* ΑΦΑΙΡΕΣΗ ΔΙΑΧΩΡΙΣΤΙΚΩΝ ΓΡΑΜΜΩΝ ΣΕ ΟΛΟ ΤΟ SITE */
@@ -39,6 +39,7 @@ body {
     width: 100%;
     background: var(--bg-color);
     z-index: 1000;
+    box-shadow: 0 1px 0 rgba(10, 10, 10, 0.06);
 }
 
 .nav-top {
@@ -57,12 +58,12 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 24px;
 }
 
 .social-icons a {
     color: var(--black);
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -122,6 +123,7 @@ body {
 
 .nav-item .en {
     display: block;
+    font-family: var(--font-sans);
     font-size: 0.55rem;
     letter-spacing: 5px;
     color: var(--accent);
@@ -131,19 +133,21 @@ body {
 
 .en-sub {
     display: block;
-    font-size: 0.75rem;
-    letter-spacing: 6px;
-    color: var(--accent);
-    margin-top: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 8px;
+    color: rgba(96, 0, 16, 0.75);
+    margin-top: 10px;
     text-transform: uppercase;
 }
 
 .en-title {
     display: block;
-    font-size: 0.7rem;
-    letter-spacing: 5px;
-    color: var(--accent);
-    margin-top: 6px;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    letter-spacing: 6px;
+    color: rgba(96, 0, 16, 0.7);
+    margin-top: 10px;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -187,9 +191,9 @@ body {
     background-position: center;
     opacity: 0;                      /* Αρχικά αόρατο, ο JS το κάνει visible */
     transition: opacity 1.5s ease-in-out;  /* ΜΟΝΟ fade, χωρίς κίνηση */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
-    border-radius: 3px;
-    filter: sepia(5%) contrast(105%);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.14);
+    border-radius: 2px;
+    filter: sepia(8%) contrast(102%);
 }
 
 /* Αριστερά: ψηλό πορτρέτο */
@@ -217,30 +221,38 @@ body {
 }
 
 /* CONTENT BOX & TEXT — τοποθετούνται στο κεντρικό κενό */
-.main-title-box { 
-    position: relative; 
-    z-index: 10; 
-    text-align: center; 
-    padding: 24px 32px;
-    background: rgba(var(--bg-color-rgb), 0.55);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+.main-title-box {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 32px 48px;
+    background: rgba(var(--bg-color-rgb), 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     width: fit-content;
     margin-left: -6vw; /* Σπρώχνει ελαφρά αριστερά του κέντρου για να αποφύγει τις εικόνες */
+}
+
+.main-title-box h1 {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 1.2;
 }
 
 .intro-bottom-text {
     position: relative;
     z-index: 10;
-    max-width: 420px;
+    max-width: 400px;
     text-align: center;
     margin-top: 22px;
     margin-left: -6vw;
     padding: 0 20px;
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.9;
     font-weight: 300;
-    color: var(--black);
+    color: rgba(10, 10, 10, 0.7);
 }
 
 
@@ -271,11 +283,13 @@ main {
 .section-title {
     font-family: var(--font-serif);
     font-size: 2.5rem;
+    font-weight: 400;
     margin-top: 0;
     padding-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     text-align: center;
     line-height: 1.2;
+    letter-spacing: 1px;
 }
 
 /* 6. ΠΡΟΪΟΝΤΑ (GRID) */
@@ -288,32 +302,72 @@ main {
 }
 
 .item {
-    border-left: 2px solid var(--accent);
-    padding-left: 20px;
-    transition: transform 0.3s ease;
+    border-left: 1px solid var(--accent);
+    padding-left: 24px;
+    transition: transform 0.4s ease;
 }
 
 .item:hover {
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 .item h3 {
     font-family: var(--font-serif);
     font-size: 1.2rem;
     margin-bottom: 10px;
+    transition: color 0.4s ease;
+}
+
+.item:hover h3 {
+    color: var(--accent);
+}
+
+.item p {
+    color: rgba(10, 10, 10, 0.55);
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.75;
 }
 
 .price {
     color: var(--accent);
-    font-weight: bold;
-    margin-top: 10px;
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    margin-top: 12px;
     display: block;
 }
 
 footer {
     text-align: center;
-    padding: 5rem;
-    font-size: 0.9rem;
+    padding: 4rem 2rem 3rem;
+    font-size: 0.85rem;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 0 auto 2rem;
+    opacity: 0.5;
+}
+
+.footer-address {
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 0.75rem;
+}
+
+.footer-copy {
+    opacity: 0.45;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
 }
 
 /* 7. TABLET RESPONSIVENESS */
@@ -357,6 +411,7 @@ footer {
     }
     .intro-visual-section { min-height: 100vh; }
     .main-title-box { margin-left: 0; padding: 18px 24px; }
+    .main-title-box h1 { font-size: 2rem; letter-spacing: 2px; }
     .intro-bottom-text { font-size: 0.9rem; margin-top: 18px; margin-left: 0; max-width: 85vw; }
     .logo { font-size: 1.1rem; }
     
