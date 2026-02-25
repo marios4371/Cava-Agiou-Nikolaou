@@ -1,8 +1,11 @@
 /* 1. ΡΥΘΜΙΣΕΙΣ ΜΕΤΑΒΛΗΤΩΝ ΚΑΙ ΓΕΝΙΚΑ */
 :root {
-    --bg-color: #BA9D75; /* Σκούρο Μπεζ */
-    --accent: #600010;   /* Μπορντό */
-    --black: #0a0a0a;    /* Μαύρο */
+    --bg-color: #BA9D75;           /* Σκούρο Μπεζ */
+    --bg-color-rgb: 186, 157, 117; /* Same as above, for rgba() use */
+    --accent: #600010;             /* Μπορντό */
+    --black: #0a0a0a;              /* Μαύρο */
+    --font-serif: 'Cinzel', serif;
+    --font-sans: 'Montserrat', sans-serif;
 }
 
 * {
@@ -19,7 +22,7 @@ html {
 body {
     background-color: var(--bg-color);
     color: var(--black);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-sans);
     overflow-x: hidden;
     line-height: 1.6;
 }
@@ -46,7 +49,7 @@ body {
 }
 
 .logo {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-serif);
     font-weight: 700;
     font-size: 1.3rem;
     letter-spacing: 2px;
@@ -66,6 +69,13 @@ body {
 
 .social-icons a:hover {
     color: var(--accent);
+}
+
+/* Focus styles for keyboard navigation */
+.social-icons a:focus-visible,
+.nav-item:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
 }
 
 /* 3. CAROUSEL (NAVIGATION) */
@@ -117,6 +127,25 @@ body {
     color: var(--accent);
     margin-top: 4px;
     text-transform: uppercase;
+}
+
+.en-sub {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 6px;
+    color: var(--accent);
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+.en-title {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+    color: var(--accent);
+    margin-top: 6px;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 .is-active .clone {
@@ -193,7 +222,7 @@ body {
     z-index: 10; 
     text-align: center; 
     padding: 24px 32px;
-    background: rgba(186, 157, 117, 0.55); 
+    background: rgba(var(--bg-color-rgb), 0.55);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     width: fit-content;
@@ -240,7 +269,7 @@ main {
 }
 
 .section-title {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-serif);
     font-size: 2.5rem;
     margin-top: 0;
     padding-top: 0;
@@ -269,7 +298,7 @@ main {
 }
 
 .item h3 {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-serif);
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
@@ -287,7 +316,25 @@ footer {
     font-size: 0.9rem;
 }
 
-/* 7. MOBILE RESPONSIVENESS */
+/* 7. TABLET RESPONSIVENESS */
+@media (max-width: 1024px) {
+    .slot-top-left {
+        width: 30vw;
+        height: 60vh;
+    }
+    .slot-center-top {
+        width: 32vw;
+        height: 32vh;
+    }
+    .slot-top-right {
+        width: 32vw;
+        height: 26vh;
+    }
+    .main-title-box { margin-left: -3vw; }
+    .intro-bottom-text { margin-left: -3vw; }
+}
+
+/* 8. MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
     .nav-top {
         flex-direction: column;

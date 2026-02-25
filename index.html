@@ -2,8 +2,15 @@
 <html lang="el">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cava Agiou Nikolaou — Κρασιά, cocktails, spirits και επιλεγμένες γεύσεις σε μια ατμόσφαιρα ζεστασιάς. Wine & cocktail bar.">
+    <meta property="og:title" content="Cava Agiou Nikolaou">
+    <meta property="og:description" content="Κρασιά, cocktails, spirits και επιλεγμένες γεύσεις σε μια ατμόσφαιρα ζεστασιάς.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="cava.png">
     <title>Cava Agiou Nikolaou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
@@ -14,26 +21,26 @@
         <div class="nav-top">
             <div class="logo">CAVA AGIOU NIKOLAOU</div>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://maps.google.com" target="_blank"><i class="fas fa-location-dot"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://maps.google.com" target="_blank" rel="noopener" aria-label="Location on Google Maps"><i class="fas fa-location-dot"></i></a>
             </div>
         </div>
         
-        <div class="carousel-container" id="carouselWrapper">
+        <nav class="carousel-container" id="carouselWrapper" aria-label="Menu navigation">
             <div class="carousel-track" id="carouselTrack">
-                <a href="#wines" class="nav-item">ΚΡΑΣΙΑ <span class="en">WINES</span></a>
-                <a href="#spirits" class="nav-item">ΠΟΤΑ <span class="en">SPIRITS</span></a>
-                <a href="#cocktails" class="nav-item">SIGNATURE COCKTAILS <span class="en">COCKTAILS</span></a>
-                <a href="#beers" class="nav-item">ΜΠΥΡΕΣ <span class="en">BEERS</span></a>
-                <a href="#soft-drinks" class="nav-item">ΑΝΑΨΥΚΤΙΚΑ <span class="en">SOFT DRINKS</span></a>
-                <a href="#wines" class="nav-item clone">ΚΡΑΣΙΑ <span class="en">WINES</span></a>
-                <a href="#spirits" class="nav-item clone">ΠΟΤΑ <span class="en">SPIRITS</span></a>
-                <a href="#cocktails" class="nav-item clone">SIGNATURE COCKTAILS <span class="en">COCKTAILS</span></a>
-                <a href="#beers" class="nav-item clone">ΜΠΥΡΕΣ <span class="en">BEERS</span></a>
-                <a href="#soft-drinks" class="nav-item clone">ΑΝΑΨΥΚΤΙΚΑ <span class="en">SOFT DRINKS</span></a>
+                <a href="#wines" class="nav-item">ΚΡΑΣΙΑ <span class="en" lang="en">WINES</span></a>
+                <a href="#spirits" class="nav-item">ΠΟΤΑ <span class="en" lang="en">SPIRITS</span></a>
+                <a href="#cocktails" class="nav-item">SIGNATURE COCKTAILS <span class="en" lang="en">COCKTAILS</span></a>
+                <a href="#beers" class="nav-item">ΜΠΥΡΕΣ <span class="en" lang="en">BEERS</span></a>
+                <a href="#soft-drinks" class="nav-item">ΑΝΑΨΥΚΤΙΚΑ <span class="en" lang="en">SOFT DRINKS</span></a>
+                <a href="#wines" class="nav-item clone">ΚΡΑΣΙΑ <span class="en" lang="en">WINES</span></a>
+                <a href="#spirits" class="nav-item clone">ΠΟΤΑ <span class="en" lang="en">SPIRITS</span></a>
+                <a href="#cocktails" class="nav-item clone">SIGNATURE COCKTAILS <span class="en" lang="en">COCKTAILS</span></a>
+                <a href="#beers" class="nav-item clone">ΜΠΥΡΕΣ <span class="en" lang="en">BEERS</span></a>
+                <a href="#soft-drinks" class="nav-item clone">ΑΝΑΨΥΚΤΙΚΑ <span class="en" lang="en">SOFT DRINKS</span></a>
             </div>
-        </div>
+        </nav>
     </header>
 
     <main>
@@ -46,7 +53,7 @@
 
             <div class="main-title-box">
                 <h1>Cava Agiou Nikolaou</h1>
-                <p class="en-sub">ESTABLISHED EXCELLENCE</p>
+                <p class="en-sub" lang="en">ESTABLISHED EXCELLENCE</p>
             </div>
 
             <div class="intro-bottom-text">
@@ -55,7 +62,7 @@
         </section>
 
         <section id="wines" class="spacer-section">
-            <h2 class="section-title">Κρασιά <span class="en-title">WINES</span></h2>
+            <h2 class="section-title">Κρασιά <span class="en-title" lang="en">WINES</span></h2>
             <div class="grid">
                 <div class="item"><h3>Château Margaux</h3><p>Ερυθρός οίνος, Bordeaux.</p><span class="price">850.00€</span></div>
                 <div class="item"><h3>Σαντορίνη Ασύρτικο</h3><p>Λευκός ξηρός οίνος.</p><span class="price">24.00€</span></div>
@@ -64,7 +71,7 @@
         </section>
 
         <section id="spirits" class="spacer-section">
-            <h2 class="section-title">Ποτά <span class="en-title">SPIRITS</span></h2>
+            <h2 class="section-title">Ποτά <span class="en-title" lang="en">SPIRITS</span></h2>
             <div class="grid">
                 <div class="item"><h3>Macallan 12Y</h3><p>Single Malt Scotch Whisky.</p><span class="price">85.00€</span></div>
                 <div class="item"><h3>Grey Goose</h3><p>Premium French Vodka.</p><span class="price">55.00€</span></div>
@@ -73,7 +80,7 @@
         </section>
 
         <section id="cocktails" class="spacer-section">
-            <h2 class="section-title">Cocktails <span class="en-title">SIGNATURE</span></h2>
+            <h2 class="section-title" lang="en">Cocktails <span class="en-title">SIGNATURE</span></h2>
             <div class="grid">
                 <div class="item"><h3>Negroni</h3><p>Gin, Campari, Sweet Vermouth.</p><span class="price">10.00€</span></div>
                 <div class="item"><h3>Old Fashioned</h3><p>Bourbon, Bitters, Sugar.</p><span class="price">12.00€</span></div>
@@ -82,7 +89,7 @@
         </section>
 
         <section id="beers" class="spacer-section">
-            <h2 class="section-title">Μπύρες <span class="en-title">BEERS</span></h2>
+            <h2 class="section-title">Μπύρες <span class="en-title" lang="en">BEERS</span></h2>
             <div class="grid">
                 <div class="item"><h3>Septem 8th Day</h3><p>Greek IPA.</p><span class="price">6.00€</span></div>
                 <div class="item"><h3>Stella Artois</h3><p>Classic Lager.</p><span class="price">5.00€</span></div>
@@ -91,7 +98,7 @@
         </section>
 
         <section id="soft-drinks" class="spacer-section">
-            <h2 class="section-title">Αναψυκτικά <span class="en-title">SOFT DRINKS</span></h2>
+            <h2 class="section-title">Αναψυκτικά <span class="en-title" lang="en">SOFT DRINKS</span></h2>
             <div class="grid">
                 <div class="item"><h3>Three Cents Pink Grapefruit</h3><p>Soda.</p><span class="price">3.50€</span></div>
                 <div class="item"><h3>Coca Cola 250ml</h3><p>Classic glass bottle.</p><span class="price">2.50€</span></div>
@@ -99,6 +106,10 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Cava Agiou Nikolaou. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
