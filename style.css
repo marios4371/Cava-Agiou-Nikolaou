@@ -257,6 +257,14 @@ main {
     align-items: center;
     padding: 0 10% 100px;
     width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.spacer-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section-title {

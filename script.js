@@ -176,6 +176,21 @@ function initIntroSystem() {
     });
 }
 
+// --- SECTION FADE IN / OUT ON SCROLL ---
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        } else {
+            entry.target.classList.remove('is-visible');
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.spacer-section').forEach(section => {
+    sectionObserver.observe(section);
+});
+
 window.addEventListener('load', () => {
     initIntroSystem();
     if (typeof updateNavbarOffsets === 'function') updateNavbarOffsets();
