@@ -99,7 +99,7 @@ container.addEventListener('click', (e) => {
 
 animate();
 
-// --- STATIC COLLAGE IMAGE SYSTEM (fade only, no movement) ---
+// STATIC COLLAGE IMAGE SYSTEM (fade only, no movement)
 const cavaImages = ['cava.png', 'cava_1.png', 'cava_3.png'];
 const imageSlots = document.querySelectorAll('.large-slot');
 
