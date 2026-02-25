@@ -185,7 +185,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
             entry.target.classList.remove('is-visible');
         }
     });
-}, { threshold: 0.15 });
+}, { threshold: 0.2 });
 
 document.querySelectorAll('.spacer-section').forEach(section => {
     sectionObserver.observe(section);
