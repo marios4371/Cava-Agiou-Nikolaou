@@ -243,15 +243,6 @@ body {
     color: var(--black);
 }
 
-/* ΒΙΝΙΕΤΑΡΙΣΜΑ */
-.intro-visual-section::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.04) 100%);
-    pointer-events: none;
-    z-index: 3;
-}
 
 /* 5. ΠΕΡΙΕΧΟΜΕΝΟ & ΕΝΟΤΗΤΕΣ (PRODUCT SECTIONS) */
 main {
